@@ -2,19 +2,19 @@
     <!-- Base application theme. -->
     <style name="Theme.BioBasket" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#B028BA</item>
-        <item name="colorPrimaryVariant">#573753</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">#43a047</item>
+        <item name="colorPrimaryVariant">#00701a</item>
+        <item name="colorOnPrimary">#76d275</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
+        <item name="colorSecondary">#6d4c41</item>
+        <item name="colorSecondaryVariant">#40241a</item>
+        <item name="colorOnSecondary">#9c786c</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Theme.BioBasket.NoActionBar">
+    <style name="Theme.BioBasket.NoActionBar" parent="Theme.BioBasket">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>

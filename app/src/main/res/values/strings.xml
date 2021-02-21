@@ -5,6 +5,8 @@
     <string name="password">PASSWORD</string>
     <string name="remember_me">REMEMBER ME</string>
     <string name="signin">SIGNIN</string>
-    <string name="don_t_have_an_account">Don\'t have an Account</string>
+    <string name="already_have_account">Already have an Account</string>
     <string name="sign_up">SIGN UP</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
+    <string name="full_name">Full Name</string>
 </resources>
