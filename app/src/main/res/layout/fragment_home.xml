@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.navigation.HomeFragment">
+
+ <ScrollView
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"
+     android:scrollbarSize="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:background="@drawable/fragment_background"
+        android:focusableInTouchMode="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/roundedImageView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="17dp"
+            android:src="@drawable/user"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/viewpagerSlider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpagerSlider"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/roundedImageView"
+            tools:src="@tools:sample/backgrounds/scenic"
+            app:layout_constraintVertical_bias="0.172" />
+
+        <ImageButton
+            android:id="@+id/sideNav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_hamburger"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:backgroundTint="#f5f5f5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="sideNav" />
+
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="Search an item"
+            android:textAlignment="center"
+            android:background="@drawable/search_background"
+            android:backgroundTint="#B5F1B8"
+            app:layout_constraintStart_toEndOf="@id/sideNav"
+            app:layout_constraintBottom_toTopOf="@+id/viewpagerSlider"
+            app:layout_constraintEnd_toStartOf="@+id/roundedImageView"
+            app:layout_constraintTop_toTopOf="parent"
+            android:inputType="text"
+            android:importantForAutofill="no" />
+        <TextView
+            android:id="@+id/shopBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shop by categories "
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/viewpagerSlider"/>
+
+        <View
+            android:id="@+id/line_2"
+            android:layout_width="100dp"
+            android:layout_height="2dp"
+            android:background="@drawable/line_drawable"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shopBy"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/categoryView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_category"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shopBy"
+            android:layout_marginTop="22dp"/>
+
+        <TextView
+            android:id="@+id/popItm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popular Items"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/categoryView"/>
+        <View
+            android:id="@+id/line4"
+            android:layout_width="100dp"
+            android:layout_height="2dp"
+            android:background="@drawable/line_drawable"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/popItm"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/popularRecycleView"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginTop="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/popItm"
+            tools:listitem="@layout/item_list" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+ </ScrollView>
+
+</layout>

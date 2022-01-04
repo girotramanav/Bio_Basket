@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/listCardView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="12dp"
+    app:cardCornerRadius="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/listItemImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            app:riv_corner_radius="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:src="@tools:sample/backgrounds/scenic"/>
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/listItemImage"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:text="Wooden Pencil" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@android:style/Widget.Material.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:progressTint="#FBD201"
+            android:rating="1.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.683"
+            app:layout_constraintStart_toStartOf="@id/listItemImage"
+            app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+        <TextView
+            android:id="@+id/priceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:text="Rs. 182/pc"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/descriptionText"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="#5C5B5B"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toEndOf="@id/listItemImage"
+            app:layout_constraintTop_toBottomOf="@id/ratingBar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:text="This is a general description..." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

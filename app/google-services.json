@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "462008289514",
+    "project_id": "bio-basket",
+    "storage_bucket": "bio-basket.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:462008289514:android:453f870d959af4b0b9ef93",
+        "android_client_info": {
+          "package_name": "com.example.biobasket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "462008289514-ah1nf60ubjqmtce5oc2mao6chalh7e9v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHzaHkPxsC_FfhBDJjXrYK_Xise3THWHg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "462008289514-ah1nf60ubjqmtce5oc2mao6chalh7e9v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
